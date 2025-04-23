@@ -6,6 +6,8 @@
     <title>Global Automate Pro</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
@@ -246,6 +248,228 @@
         </div>
         </section>
 
+        <!-- SECCIÓN: Explorar talentos por categoría -->
+<section class="w-full px-4 py-16 bg-blue-50">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-6">Explorar talentos por categoría</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Tarjeta categoría -->
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">Automatización de Procesos</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4.8/5</span>
+          <span>459 Post</span>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">Integración de Sistemas</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4/5</span>
+          <span>769 Post</span>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">Chatbots y Automatización de Servicio al Cliente</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4.8/5</span>
+          <span>349 Post</span>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">Seguridad y Cumplimiento</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4.8/5</span>
+          <span>567 Post</span>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">Análisis y Visualización de Datos</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4.8/5</span>
+          <span>123 Post</span>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">Desarrollo de Software para Automatización</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4.8/5</span>
+          <span>567 Post</span>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">IoT y Automatización Industrial</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4.8/5</span>
+          <span>109 Post</span>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">Seguridad y Cumplimiento</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4.8/5</span>
+          <span>289 Post</span>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow text-sm">
+        <p class="font-medium mb-2">Soporte y Mantenimiento</p>
+        <div class="flex justify-between text-gray-500">
+          <span>⭐ 4.8/5</span>
+          <span>378 Post</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECCIÓN: ¿Por qué confiar en nosotros? -->
+<section class="w-full px-4 py-20 bg-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-2xl font-bold mb-4">¿Por qué confiar en nosotros?</h2>
+      <p class="text-gray-600 mb-6">En GlobalAutomate PRO, la seguridad, transparencia y satisfacción de nuestros clientes son nuestra prioridad.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="flex items-center gap-3 p-4 border rounded-lg bg-white shadow-sm">
+          <i class="fa-solid fa-shield-halved text-blue-600 text-lg"></i>
+          <span class="text-sm font-medium">Proveedores Verificados</span>
+        </div>
+        <div class="flex items-center gap-3 p-4 border rounded-lg bg-white shadow-sm">
+          <i class="fa-solid fa-file-circle-check text-blue-600 text-lg"></i>
+          <span class="text-sm font-medium">Proyectos con Garantía</span>
+        </div>
+        <div class="flex items-center gap-3 p-4 border rounded-lg bg-white shadow-sm">
+          <i class="fa-solid fa-eye text-blue-600 text-lg"></i>
+          <span class="text-sm font-medium">Transparencia</span>
+        </div>
+        <div class="flex items-center gap-3 p-4 border rounded-lg bg-white shadow-sm">
+          <i class="fa-solid fa-users text-blue-600 text-lg"></i>
+          <span class="text-sm font-medium">Comunidad de Expertos</span>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <img src="/images/person-secure.png" alt="Seguro" class="rounded-xl w-full max-w-sm mx-auto">
+      
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: Comentarios de clientes -->
+<section class="w-full px-4 py-20 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-10">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">Comentarios de clientes</h2>
+        <p class="text-gray-600 max-w-xl">Empresas que confiaron en GlobalAutomate PRO para optimizar sus procesos y conectar con talento especializado en automatización e integración tecnológica.</p>
+      </div>
+      <div class="flex gap-2">
+        <button class="bg-blue-100 text-blue-700 p-2 rounded-full hover:bg-blue-200">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="bg-blue-700 text-white p-2 rounded-full hover:bg-blue-800">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Testimonio 1 -->
+      <div class="border rounded-xl p-6 shadow-sm text-center">
+        <div class="flex justify-center mb-4">
+          <i class="fa-solid fa-building-circle-check text-cyan-600 text-4xl"></i>
+        </div>
+        <p class="text-sm text-gray-700 italic mb-6">
+          “Gracias a GlobalAutomate PRO pudimos automatizar varios procesos críticos sin depender de personal interno. La plataforma nos conectó con expertos confiables, y los resultados fueron inmediatos.”
+        </p>
+        <h3 class="font-semibold text-gray-900">TechNova Solutions</h3>
+      </div>
+
+      <!-- Testimonio 2 -->
+      <div class="border rounded-xl p-6 shadow-md text-center">
+        <div class="flex justify-center mb-4">
+          <i class="fa-solid fa-atom text-violet-600 text-4xl"></i>
+        </div>
+        <p class="text-sm text-gray-700 italic mb-6">
+          “Lo que más valoro es la claridad y rapidez para contratar soluciones listas para usar. Publicamos un requerimiento y en minutos teníamos propuestas estructuradas y comparables.”
+        </p>
+        <h3 class="font-semibold text-gray-900">InnovaCorp</h3>
+      </div>
+
+      <!-- Testimonio 3 -->
+      <div class="border rounded-xl p-6 shadow-sm text-center">
+        <div class="flex justify-center mb-4">
+          <i class="fa-solid fa-network-wired text-gray-800 text-4xl"></i>
+        </div>
+        <p class="text-sm text-gray-700 italic mb-6">
+          “Nuestra empresa necesitaba integrar sistemas antiguos con nuevas herramientas. Con la ayuda de un freelancer especializado en integración, ahora nuestros flujos de trabajo son más eficientes.”
+        </p>
+        <h3 class="font-semibold text-gray-900">SysTech</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: CTA Automatización -->
+<section class="w-full px-4 py-16 bg-blue-600 rounded-xl mx-auto max-w-7xl overflow-hidden relative text-white">
+  <div class="grid md:grid-cols-2 items-center">
+    <div class="p-6 md:p-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Conecta con expertos en automatización ahora</h2>
+      <p class="text-blue-100 mb-6">Encuentra freelancers especializados para optimizar tus procesos y escalar tu negocio. Publica tus requerimientos, recibe propuestas claras y transforma tu empresa con soluciones tecnológicas confiables.</p>
+      <button class="bg-white text-blue-600 font-semibold px-5 py-2 rounded shadow hover:bg-blue-100 transition">Publicar requerimientos</button>
+    </div>
+    <div class="relative hidden md:flex justify-end">
+      <img src="/images/woman-laptop.png" alt="Experta" class="max-w-sm rounded-xl">
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: Footer -->
+<footer class="w-full px-6 py-12 bg-white border-t">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!-- Enlaces rápidos -->
+    <div>
+      <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+      <ul class="space-y-2 text-sm text-gray-600">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Cómo funciona</a></li>
+        <li><a href="#">Categoría freelancer</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Para empresas -->
+    <div>
+      <h3 class="text-lg font-bold mb-4">Para Empresas</h3>
+      <ul class="space-y-2 text-sm text-gray-600">
+        <li><a href="#">Publicar un proyecto</a></li>
+        <li><a href="#">Encontrar freelancers</a></li>
+        <li><a href="#">Soluciones preconfiguradas</a></li>
+      </ul>
+    </div>
+
+    <!-- Suscripción -->
+    <div>
+      <h3 class="text-lg font-bold mb-4">Suscríbete</h3>
+      <div class="relative">
+        <input type="email" placeholder="ejemplo@gmail.com" class="w-full px-4 py-2 bg-blue-50 rounded-md pr-10 text-sm">
+        <button class="absolute right-2 top-2 text-blue-600"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Únase a nuestro boletín para mantenerse actualizado sobre las características y los lanzamientos.</p>
+    </div>
+  </div>
+  <div class="mt-10 border-t pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+    <p>2025 GAP. Todos los derechos reservados.</p>
+    <div class="flex gap-4 mt-4 md:mt-0">
+      <a href="#">Políticas y Privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+    <div class="flex gap-3 mt-4 md:mt-0">
+      <a href="#"><i class="fa-brands fa-linkedin text-blue-600"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter text-blue-400"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram text-pink-500"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook text-blue-700"></i></a>
+    </div>
+  </div>
+</footer>
+
     </div>
 
     <script>
@@ -258,6 +482,8 @@
             });
         }
     </script>
+
+
   </body>
 
 
