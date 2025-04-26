@@ -47,7 +47,7 @@
           <a href="#" class="hover:text-blue-600">Encontrar trabajo / talento</a>
           <a href="#" class="hover:text-blue-600">Talentos</a>
           <a href="#" class="hover:text-blue-600">Nosotros</a>
-          <a href="{{ route('login') }}" class="text-blue-600 font-semibold">Iniciar sesión</a>
+          <a href="{{ route('showForm', ['type' => 'login']) }}" class="text-blue-600 font-semibold">Iniciar sesión</a>
           <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-md">Registrar</a>
         </nav>
       </header>

@@ -11,9 +11,9 @@ use App\Models\User;
 class AuthController extends Controller
 {
     // Mostrar formulario de login
-    public function showLoginForm()
+    public function showForm($type)
     {
-        return view('auth.login');
+        return view('auth.form', ['formType' => $type]);
     }
 
     // Procesar login
