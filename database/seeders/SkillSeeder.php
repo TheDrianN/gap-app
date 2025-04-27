@@ -9,7 +9,7 @@ class SkillSeeder extends Seeder
 {
     public function run()
     {
-        $skills = ['PHP', 'Laravel', 'Vue.js', 'React', 'Node.js', 'Python', 'Django', 'SQL', 'HTML', 'CSS'];
+        $skills = ['Business Intelligence','Integración de Sistemas','Desarrollo Web','Automatización','Inteligencia Artificial','Ciberseguridad','ERPs','PHP', 'Laravel', 'Vue.js', 'React', 'Node.js', 'Python', 'Django', 'SQL', 'HTML', 'CSS'];
 
         foreach ($skills as $skill) {
             Skill::create(['name' => $skill]);
