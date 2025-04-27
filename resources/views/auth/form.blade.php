@@ -35,7 +35,7 @@
                 </svg>
             </div>
 
-            <div class="z-10 bg-white rounded-xl shadow-xl p-10 w-full max-w-md text-center">
+            <div class="z-10 bg-white rounded-xl shadow-xl p-10 w-full max-w-xl md:max-w-2xl xl:max-w-3xl min-w-[300px] text-center transition-all duration-500">
                 <!-- Logo -->
                 <div class="flex justify-center items-center mb-6">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-75 w-75 mr-2">
@@ -84,56 +84,227 @@
                         </form>
                     </div>
                 @else
-                    <!-- Formulario de Registro -->
-                    <div id="registerForm" class="form-content">
-                        <form method="POST" action="#">
+                    <!-- Tabs de selección -->
+                    <div class="flex justify-center mb-8">
+                        <div class="flex bg-gray-100 p-1 rounded-lg space-x-2">
+                            <button id="empresaTab"
+                                class="px-6 py-2 text-sm font-semibold rounded-lg focus:outline-none transition-all duration-300 text-gray-500"
+                                onclick="showForm('empresa')">
+                                Perfil empresa
+                            </button>
+
+                            <button id="freelancerTab"
+                                class="px-6 py-2 text-sm font-semibold rounded-lg focus:outline-none transition-all duration-300 text-gray-500"
+                                onclick="showForm('freelancer')">
+                                Perfil freelancer
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Formularios -->
+                    <div id="empresaForm" class="hidden">
+                        <form method="POST" action="#" enctype="multipart/form-data">
                             @csrf
 
-                            <!-- Información general -->
+                            <!-- Título -->
+                            <div class="mb-8 text-left">
+                                <h2 class="text-lg font-bold text-gray-800">Perfil de empresa</h2>
+                                <p class="text-sm text-gray-500 mt-1">Complete la información de su empresa para comenzar a
+                                    solicitar servicios</p>
+                            </div>
+
+                            <!-- Información principal -->
                             <div class="mb-6">
-                                <h3 class="text-lg font-semibold text-gray-800 mb-4 text-left">Información general</h3>
+                                <h3 class="text-md font-semibold text-gray-800 mb-4 flex items-center">
+                                    <i class="fas fa-building mr-2"></i> Información principal
+                                </h3>
 
-                                <!-- Nombre completo -->
-                                <div class="mb-4">
-                                    <label for="name" class="block text-gray-700 font-medium mb-2 text-left">Nombre
-                                        completo</label>
-                                    <input type="text" id="name" name="name"
-                                        class="w-full px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none text-gray-700 placeholder-gray-400"
-                                        placeholder="Nombre completo" required>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <!-- Nombre de la empresa -->
+                                    <div class="text-left">
+                                        <label class="block text-gray-700 text-sm mb-1">Nombre de la empresa</label>
+                                        <input type="text" name="company_name"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 text-gray-700"
+                                            placeholder="Nombre de la empresa" required>
+                                    </div>
+
+                                    <!-- Sector -->
+                                    <div class="text-left">
+                                        <label class="block text-gray-700 text-sm mb-1">Sector</label>
+                                        <input type="text" name="sector"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 text-gray-700"
+                                            placeholder="Ej: Tecnología, Finanzas, Salud..." required>
+                                    </div>
+
+                                    <!-- Tamaño -->
+                                    <div class="text-left">
+                                        <label class="block text-gray-700 text-sm mb-1">Tamaño</label>
+                                        <select name="company_size"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 text-gray-700">
+                                            <option>1 - 10 empleados</option>
+                                            <option>11 - 50 empleados</option>
+                                            <option>51 - 200 empleados</option>
+                                            <option>201 - 500 empleados</option>
+                                            <option>501 - 1000 empleados</option>
+                                            <option>Más de 1000 empleados</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- País -->
+                                    <div class="text-left">
+                                        <label class="block text-gray-700 text-sm mb-1">País</label>
+                                        <select name="country"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 text-gray-700">
+                                            <option value="Perú">Perú</option>
+                                            <option value="México">México</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="España">España</option>
+                                            <!-- Agrega más si deseas -->
+                                        </select>
+                                    </div>
                                 </div>
 
-                                <!-- Título profesional -->
-                                <div class="mb-4">
-                                    <label for="title" class="block text-gray-700 font-medium mb-2 text-left">Título
-                                        profesional</label>
-                                    <input type="text" id="title" name="title"
-                                        class="w-full px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none text-gray-700 placeholder-gray-400"
-                                        placeholder="Ej: Especialista en Automatización de Datos" required>
+                                <!-- Descripción de la empresa -->
+                                <div class="mt-4 text-left">
+                                    <label class="block text-gray-700 text-sm mb-1">Descripción de la empresa</label>
+                                    <textarea name="description"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 text-gray-700"
+                                        placeholder="Describe brevemente tu empresa y las principales áreas de negocio..." rows="3" required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Áreas de interés tecnológico -->
+                            <div class="mb-6">
+                                <h3 class="text-md font-semibold text-gray-800 mb-4 flex items-center">
+                                    <i class="fas fa-microchip mr-2"></i> Áreas de interés tecnológico
+                                </h3>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Automatización</span>
+                                    <span
+                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Inteligencia
+                                        Artificial</span>
+                                    <span
+                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Ciberseguridad</span>
+                                    <span
+                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">ERPs</span>
+                                    <span
+                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Business
+                                        Intelligence</span>
+                                    <span
+                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Desarrollo
+                                        Web</span>
+                                    <span
+                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Integración
+                                        de Sistemas</span>
+                                    <span
+                                        class="px-4 py-2 bg-gray-300 text-gray-700 rounded-full text-sm cursor-pointer">Añadir
+                                        otro</span>
+                                </div>
+                            </div>
+
+                            <!-- Presupuesto promedio y Logo -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <!-- Presupuesto promedio -->
+                                <div class="text-left">
+                                    <label class="block text-gray-700 text-sm mb-1">Presupuesto promedio ($)</label>
+                                    <select name="budget"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 text-gray-700">
+                                        <option>Menos de $1,000</option>
+                                        <option>$1,000 - $5,000</option>
+                                        <option>$5,000 - $10,000</option>
+                                        <option>Más de $10,000</option>
+                                    </select>
                                 </div>
 
-                                <!-- País -->
-                                <div class="mb-4">
-                                    <label for="country"
-                                        class="block text-gray-700 font-medium mb-2 text-left">País</label>
-                                    <input type="text" id="country" name="country"
-                                        class="w-full px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none text-gray-700 placeholder-gray-400"
-                                        placeholder="Perú" required>
+                                <!-- Logo de empresa -->
+                                <div class="text-left">
+                                    <label class="block text-gray-700 text-sm mb-1">Logo de la empresa</label>
+                                    <input type="file" name="logo"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none">
                                 </div>
+                            </div>
 
-                                <!-- Breve biografía -->
-                                <div class="mb-6">
-                                    <label for="bio" class="block text-gray-700 font-medium mb-2 text-left">Breve
-                                        biografía</label>
-                                    <textarea id="bio" name="bio"
-                                        class="w-full px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none text-gray-700 placeholder-gray-400"
-                                        placeholder="Ej: Freelancer con 5 años integrando APIs en sistemas ERP" required></textarea>
+                            <!-- Verificación de empresa -->
+                            <div class="mb-6 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg">
+                                <p class="font-semibold">Verificación de empresa</p>
+                                <p class="text-sm mt-1">Para completar su perfil y acceder a todas las funcionalidades, se
+                                    requiere verificación. Por favor, adjunte documento de registro empresarial.</p>
+
+                                <div class="mt-4">
+                                    <button type="button"
+                                        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-full transition">
+                                        Subir documento
+                                    </button>
                                 </div>
+                            </div>
+
+                            <!-- Botones finales -->
+                            <div class="flex justify-between items-center mt-8">
+
+                                <button type="submit"
+                                    class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition">
+                                    Guardar
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Formulario Freelancer -->
+                    <div id="freelancerForm">
+                        <form method="POST" action="#">
+                            @csrf
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4 text-left">Información general</h3>
+
+                            <!-- Nombre completo -->
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2 text-left">Nombre
+                                    completo</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none text-gray-700 placeholder-gray-400"
+                                    placeholder="Nombre completo" required>
+                            </div>
+
+                            <!-- Título profesional -->
+                            <div class="mb-4">
+                                <label for="title" class="block text-gray-700 font-medium mb-2 text-left">Título
+                                    profesional</label>
+                                <input type="text" id="title" name="title"
+                                    class="w-full px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none text-gray-700 placeholder-gray-400"
+                                    placeholder="Ej: Especialista en Automatización de Datos" required>
+                            </div>
+
+                            <!-- País -->
+                            <div class="mb-4 text-left">
+                                <label for="country" class="block text-gray-700 font-medium mb-2">País</label>
+                                <select id="country" name="country"
+                                    class="w-full px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none text-gray-700">
+                                    <option value="">Selecciona un país</option>
+                                    <option value="Perú">Perú</option>
+                                    <option value="México">México</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="España">España</option>
+                                    <option value="Estados Unidos">Estados Unidos</option>
+                                </select>
+                            </div>
+
+                            <!-- Breve biografía -->
+                            <div class="mb-6">
+                                <label for="bio" class="block text-gray-700 font-medium mb-2 text-left">Breve
+                                    biografía</label>
+                                <textarea id="bio" name="bio"
+                                    class="w-full px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:outline-none text-gray-700 placeholder-gray-400"
+                                    placeholder="Ej: Freelancer con 5 años integrando APIs en sistemas ERP" required></textarea>
                             </div>
 
                             <!-- Foto de perfil -->
                             <div class="mb-6">
-                                <label for="profile_picture" class="block text-gray-700 font-medium mb-2 text-left">Foto de
-                                    perfil</label>
+                                <label for="profile_picture" class="block text-gray-700 font-medium mb-2 text-left">Foto
+                                    de perfil</label>
                                 <div
                                     class="w-full h-40 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center text-gray-600">
                                     <span class="text-center">Arrastrar y soltar imagen</span>
@@ -147,8 +318,44 @@
                             </button>
                         </form>
                     </div>
-                @endif
             </div>
+            @endif
         </div>
     </div>
+    </div>
+
+    <!-- Script para controlar los tabs -->
+    <script>
+        function showForm(type) {
+            const empresaForm = document.getElementById('empresaForm');
+            const freelancerForm = document.getElementById('freelancerForm');
+            const empresaTab = document.getElementById('empresaTab');
+            const freelancerTab = document.getElementById('freelancerTab');
+
+            if (type === 'empresa') {
+                empresaForm.classList.remove('hidden');
+                freelancerForm.classList.add('hidden');
+
+                empresaTab.classList.add('bg-white', 'text-gray-800', 'shadow');
+                empresaTab.classList.remove('text-gray-500');
+
+                freelancerTab.classList.remove('bg-white', 'text-gray-800', 'shadow');
+                freelancerTab.classList.add('text-gray-500');
+            } else {
+                freelancerForm.classList.remove('hidden');
+                empresaForm.classList.add('hidden');
+
+                freelancerTab.classList.add('bg-white', 'text-gray-800', 'shadow');
+                freelancerTab.classList.remove('text-gray-500');
+
+                empresaTab.classList.remove('bg-white', 'text-gray-800', 'shadow');
+                empresaTab.classList.add('text-gray-500');
+            }
+        }
+
+        // Mostrar Freelancer por defecto al cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            showForm('freelancer');
+        });
+    </script>
 @endsection
