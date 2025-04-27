@@ -17,6 +17,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['empresa', 'freelancer']);
+            $table->boolean('verified')->default(false);
+            $table->string('logo')->nullable();
+            $table->text('bio')->nullable();
+            $table->string('country');
+            $table->string('sector')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
