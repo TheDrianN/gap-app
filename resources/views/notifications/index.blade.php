@@ -64,7 +64,7 @@
                 </div>
                 <div class="flex justify-end">
                     <button class="text-blue-600 text-sm font-semibold border border-blue-600 rounded-full px-4 py-1 hover:bg-blue-50">
-                        Ver empleos
+                        Ver proyectos
                     </button>
                 </div>
             </div>
