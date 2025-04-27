@@ -4,7 +4,7 @@
 <div class="max-w-7xl bg-white p-5 rounded shadow mx-auto mt-8 space-y-8">
 
     <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Mis Proyectos</h1>
+        <h1 class="text-2xl font-bold">MIS PROYECTOS</h1>
         <a href="{{ route('posts.create') }}" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg flex items-center gap-2">
             <i class="fas fa-plus"></i> Nuevo Proyecto
         </a>
@@ -79,7 +79,7 @@
                 </div>
 
                 <!-- Botón Ver Propuestas -->
-                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-1 rounded-full text-xs flex items-center gap-1">
+                <a href="{{route('proposal.index')}}" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-1 rounded-full text-xs flex items-center gap-1">
                     <i class="fas fa-eye"></i> Ver Propuestas
                 </a>
             </div>

@@ -6,6 +6,8 @@
     <title>GAP Plataforma</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+
 </head>
 <body class="bg-gray-100">
     <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -70,7 +72,7 @@
                     <!-- Dropdown oculto -->
                     <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50">
                         <a href="{{ route('profile') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mi perfil</a>
-                        <a href="{{ route('proposal.index') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mis postulaciones</a>
+                        <a href="{{ route('proposal.mylistproposal') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mis propuestas</a>
                         <a href="{{ route('posts.index') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mis Proyectos</a>
 
                         <form method="POST" action="{{ route('logout') }}">

@@ -28,6 +28,10 @@ Route::get('/projects', function () {
     return view('projects.index');
 })->name('projects.index');
 
+Route::get('/projects/process', function () {
+    return view('projects.process');
+})->name('projects.process');
+
 Route::get('/messages', function () {
     return view('messages.index');
 })->name('messages.index');
@@ -43,6 +47,22 @@ Route::get('/profile', function () {
 Route::get('/proposal', function () {
     return view('proposal.index');
 })->name('proposal.index');
+
+Route::get('/proposal/viewmore', function () {
+    return view('proposal.viewmore');
+})->name('proposal.viewmore');
+
+Route::get('/proposal/listproposal', function () {
+    return view('proposal.listmyproposal');
+})->name('proposal.mylistproposal');
+
+Route::get('/proposal/myproposal', function () {
+    return view('proposal.myproposal');
+})->name('proposal.myproposal');
+
+Route::get('/proposal/create', function () {
+    return view('proposal.create');
+})->name('proposal.create');
 
 
 Route::get('/posts/create', function () {
