@@ -47,7 +47,7 @@
 
                     <!-- Formulario de Iniciar sesión (visible por defecto) -->
                     <div id="loginForm" class="form-content">
-                        <form method="POST" action="#">
+                        <form method="POST" action="{{ route('auth.login') }}">
                             @csrf
                             <div class="mb-6 relative">
                                 <input type="email" id="email" name="email"
