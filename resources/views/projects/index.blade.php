@@ -123,9 +123,9 @@
             <a href="/ruta-del-documento.pdf" target="_blank" class="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 text-sm">
                 <i class="fas fa-file-download"></i> Descargar documentos
             </a>
-            <button class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">
+            <a href="{{route('proposal.create')}}" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">
                 <i class="fas fa-paper-plane"></i> Enviar propuesta
-            </button>
+            </a>
         </div>
 
         <div class="text-gray-700 text-sm space-y-6">
