@@ -5,26 +5,22 @@
 
         <!-- Botones superiores - Versión corregida -->
         <div class="flex justify-end items-center p-6 overflow-x-hidden">
-            <div id="buttonContainer"
-                class="flex border border-blue-600 rounded-full overflow-hidden relative transition-all duration-500 ease-in-out w-auto transform">
-                <!-- Botón Iniciar sesión (activo por defecto) -->
+            <div id="buttonContainer" class="flex rounded-full overflow-hidden shadow-md">
                 <a href="{{ route('showForm', ['type' => 'login']) }}" id="loginButton"
-                    class="{{ $formType === 'login' ? 'bg-blue-600 text-white' : 'bg-transparent text-blue-600' }} text-sm font-bold px-6 py-2 rounded-full transition-all duration-300 ease-in-out"
+                    class="{{ $formType === 'login' ? 'bg-blue-600 text-white' : 'text-blue-600' }} text-sm font-bold px-6 py-2 rounded-full transition-colors duration-300"
                     onclick="setActiveButton('login'); return false;">
                     Iniciar sesión
                 </a>
-                <!-- Botón Registrar -->
                 <a href="{{ route('showForm', ['type' => 'register']) }}" id="registerButton"
-                    class="{{ $formType === 'register' ? 'bg-blue-600 text-white' : 'bg-transparent text-blue-600' }} text-sm font-bold px-6 py-2 rounded-full transition-all duration-300 ease-in-out"
+                    class="{{ $formType === 'register' ? 'bg-blue-600 text-white' : 'text-blue-600' }} text-sm font-bold px-6 py-2 rounded-full transition-colors duration-300"
                     onclick="setActiveButton('register'); return false;">
                     Registrar
                 </a>
-
             </div>
         </div>
 
         <!-- Card del formulario -->
-        <div class="flex justify-center items-center flex-grow relative">
+        <div class="flex justify-center items-center flex-grow relative pt-10 pb-10">
             <!-- Ola SVG como fondo inferior -->
             <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
                 <svg class="relative block w-full h-[600px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
@@ -35,7 +31,8 @@
                 </svg>
             </div>
 
-            <div class="z-10 bg-white rounded-xl shadow-xl p-10 w-full max-w-xl md:max-w-2xl xl:max-w-3xl min-w-[300px] text-center transition-all duration-500">
+            <div
+                class="z-10 bg-white rounded-xl shadow-xl p-10 w-full max-w-xl md:max-w-2xl xl:max-w-3xl min-w-[300px] text-center transition-all duration-500">
                 <!-- Logo -->
                 <div class="flex justify-center items-center mb-6">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-75 w-75 mr-2">
@@ -180,24 +177,34 @@
                                 </h3>
 
                                 <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Automatización</span>
-                                    <span
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Inteligencia
-                                        Artificial</span>
-                                    <span
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Ciberseguridad</span>
-                                    <span
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">ERPs</span>
-                                    <span
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Business
-                                        Intelligence</span>
-                                    <span
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Desarrollo
-                                        Web</span>
-                                    <span
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">Integración
-                                        de Sistemas</span>
+                                    <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">
+                                        Automatización
+                                        <span class="ml-2 text-xs">×</span>
+                                    </span>
+                                    <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">
+                                        Inteligencia Artificial
+                                        <span class="ml-2 text-xs">×</span>
+                                    </span>
+                                    <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">
+                                        Ciberseguridad
+                                        <span class="ml-2 text-xs">×</span>
+                                    </span>
+                                    <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">
+                                        ERPs
+                                        <span class="ml-2 text-xs">×</span>
+                                    </span>
+                                    <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">
+                                        Business Intelligence
+                                        <span class="ml-2 text-xs">×</span>
+                                    </span>
+                                    <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">
+                                        Desarrollo Web
+                                        <span class="ml-2 text-xs">×</span>
+                                    </span>
+                                    <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm cursor-pointer">
+                                        Integración de Sistemas
+                                        <span class="ml-2 text-xs">×</span>
+                                    </span>
                                     <span
                                         class="px-4 py-2 bg-gray-300 text-gray-700 rounded-full text-sm cursor-pointer">Añadir
                                         otro</span>
@@ -221,18 +228,33 @@
                                 <!-- Logo de empresa -->
                                 <div class="text-left">
                                     <label class="block text-gray-700 text-sm mb-1">Logo de la empresa</label>
-                                    <input type="file" name="logo"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none">
+                                    <div
+                                        class="relative rounded-lg overflow-hidden shadow-sm border border-gray-300 bg-gray-50 focus:outline-none">
+                                        <input type="file" name="logo"
+                                            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                                            onchange="actualizarTextoBoton(this)">
+                                        <div class="px-4 py-3 text-gray-700 flex items-center justify-center">
+                                            <svg class="w-6 h-6 mr-2 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0l-4 4m4-4v12">
+                                                </path>
+                                            </svg>
+                                            <span id="texto-boton-logo">Seleccionar archivo</span>
+                                        </div>
+                                    </div>
+                                    <p class="mt-1 text-gray-500 text-sm">Formatos aceptados: JPG, PNG.</p>
                                 </div>
                             </div>
 
                             <!-- Verificación de empresa -->
-                            <div class="mb-6 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg">
+                            <div
+                                class="mb-6 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg text-left">
                                 <p class="font-semibold">Verificación de empresa</p>
                                 <p class="text-sm mt-1">Para completar su perfil y acceder a todas las funcionalidades, se
                                     requiere verificación. Por favor, adjunte documento de registro empresarial.</p>
 
-                                <div class="mt-4">
+                                <div class="flex justify-end mt-4">
                                     <button type="button"
                                         class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-full transition">
                                         Subir documento
@@ -241,9 +263,11 @@
                             </div>
 
                             <!-- Botones finales -->
-                            <div class="flex justify-between items-center mt-8">
+                            <div class="flex justify-end items-center mt-8">
 
-                                <button type="submit"
+                                <button 
+                                    type="submit"
+                                    onclick="window.location.href='{{ route('showForm', ['type' => 'login']) }}'"
                                     class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition">
                                     Guardar
                                 </button>
@@ -254,7 +278,7 @@
 
                     <!-- Formulario Freelancer -->
                     <div id="freelancerForm">
-                        <form method="POST" action="#">
+                        <form method="POST" action="{{ route('auth.registerFreelancer.step1') }}">
                             @csrf
                             <h3 class="text-lg font-semibold text-gray-800 mb-4 text-left">Información general</h3>
 
@@ -302,12 +326,16 @@
                             </div>
 
                             <!-- Foto de perfil -->
-                            <div class="mb-6">
-                                <label for="profile_picture" class="block text-gray-700 font-medium mb-2 text-left">Foto
-                                    de perfil</label>
+                            <div class="mb-6 text-left">
+                                <label for="profile_picture" class="block text-gray-700 font-medium mb-2">Foto de
+                                    perfil</label>
                                 <div
-                                    class="w-full h-40 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center text-gray-600">
-                                    <span class="text-center">Arrastrar y soltar imagen</span>
+                                    class="w-full h-40 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center text-gray-600 space-y-2">
+                                    <i class="fas fa-camera text-3xl text-purple-500"></i>
+                                    <span class="text-center">
+                                        Arrastrar y soltar <span class="text-purple-600 font-semibold">foto de
+                                            perfil</span>
+                                    </span>
                                 </div>
                             </div>
 

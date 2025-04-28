@@ -76,3 +76,5 @@ Route::get('/posts', function () {
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
+
+Route::post('/register-freelancer/step1', [AuthController::class, 'showRegisterForm'])->name('auth.registerFreelancer.step1');

@@ -19,13 +19,21 @@ class AuthController extends Controller
     // Procesar login
     public function login(Request $request)
     {
+
+        /*
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
-
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+            return redirect()->route('home');
+        }
+        */
+
+        $credentials = true;
+
+        if ($credentials) {
             return redirect()->route('home');
         }
 
@@ -37,7 +45,7 @@ class AuthController extends Controller
     // Mostrar formulario de registro
     public function showRegisterForm()
     {
-        return view('auth.register');
+        return view('auth.registroFreelancer');
     }
 
     // Procesar registro
